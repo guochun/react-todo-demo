@@ -30,3 +30,16 @@ module.exports = function(app) {
 2: 直接将mock数据放到puclic文件夹
 
 ## React 思维方式
+
+### 组件划分原则
+
+- 解耦: 降低单一模块/组件的复杂度
+- 复用：保证组件的一致性 提升开发效率
+- 组件颗粒度需要避免过大过小
+
+### 编写静态组件
+
+开发过程解耦: 静态页面和动态交互
+组件开发顺序: 自上而下 or 自下而上
+
+APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
