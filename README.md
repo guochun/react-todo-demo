@@ -75,3 +75,8 @@ APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
 - UI可以触发一个行为(action)
 - action发送给reducer
 - reducer更新store
+
+### state
+
+- 集中管理 全局唯一
+- 不可变性
