@@ -50,3 +50,10 @@ APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
 - 是否通过父组件props传入
 - 是否不会随着时间 交互操作变化
 - 是否可以通过其他的state和props计算得到
+
+### 分析state保存位置
+
+- 如果state只是这个组件的私有状态不会被其他状态运用 可以成为这个组件的state
+
+- 如果这个state会被多个组件共享 要确定这个组件的公共组件
+把state上移到公用的父组件。(状态上移)
