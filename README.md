@@ -43,3 +43,10 @@ module.exports = function(app) {
 组件开发顺序: 自上而下 or 自下而上
 
 APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
+
+### 如何设计state
+
+- 代表UI的完整且最小的状态的集合
+- 是否通过父组件props传入
+- 是否不会随着时间 交互操作变化
+- 是否可以通过其他的state和props计算得到
