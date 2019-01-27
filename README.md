@@ -63,3 +63,15 @@ APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
 - 借助props 添加反向数据流
 - 新增todo 修改todo的显示 过滤显示
 
+### 为什么用Redux
+
+- 前端的状态复杂: API数据 本地数据 UI状态等
+- 视图和状态管理耦合, 状态管理失控
+
+### Redux基本思想
+
+- store 包含着state
+- state定义UI的状态
+- UI可以触发一个行为(action)
+- action发送给reducer
+- reducer更新store
