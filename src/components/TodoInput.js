@@ -7,14 +7,27 @@ class TodoInput extends Component {
     this.state = {
       text: ''
     };
+    this.handleChange = this.handleChange.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
   render() {
     return (
       <div>
-        <input value={this.state.text} />
-        <button>add</button>
+        <input onChange = {this.handleChange} value={this.state.text} />
+        <button onClick={this.handleClick}>add</button>
       </div>
     );
+  }
+
+  handleChange (e) {
+    this.setState({
+      text: e.target.value
+    })
+  }
+
+  handleClick () {
+    if(this.state.text === '') return;
+    this.props.addTodoItem(this.state.text)
   }
 }
 

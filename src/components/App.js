@@ -12,22 +12,26 @@ class App extends Component {
       todos: [],
       filter: 'all'
     }
+    this.nextTodoId = 0;
+    this.addTodoItem = this.addTodoItem.bind(this)
+    this.toggleTodoItem = this.toggleTodoItem.bind(this)
+    this.setFilter = this.setFilter.bind(this)
   }
   render() {
-    const todos = this.getVisiableTodos();
-    const { filter } = this.props;
+    const todos = this.filterTodos();
+    const { filter } = this.state;
     return (
       <div>
-        <TodoInput />
-        <TodoList todos={todos} />
-        <TodoFooter filter={filter} />
+        <TodoInput addTodoItem = {this.addTodoItem} />
+        <TodoList todos={todos}  toggleTodoItem={this.toggleTodoItem} />
+        <TodoFooter filter={filter} setFilter={this.setFilter} />
       </div>
     );
   }
 
-  getVisiableTodos() {
+  filterTodos() {
     const currentFilter = this.state.filter;
-    this.state.todos.filter((item) => {
+    return this.state.todos.filter((item) => {
       if (currentFilter === 'actived') {
         return !item.completed
       } else if (currentFilter === 'completed') {
@@ -35,6 +39,36 @@ class App extends Component {
       } else {
         return true
       }
+    })
+  }
+
+  addTodoItem(text) {
+    const item = {
+      id: this.nextTodoId ++,
+      text,
+      completed: false
+    }
+    const todos = [item, ...this.state.todos]
+
+    this.setState({
+      todos
+    })
+  }
+
+  toggleTodoItem(id) {
+    const newTodos = this.state.todos.map((item) => {
+      return item.id === id ? {...item, completed: !item.completed} : item
+    })
+
+    this.setState({
+      todos: newTodos
+    })
+
+  }
+
+  setFilter(filter) {
+    this.setState({
+      filter,
     })
   }
 }

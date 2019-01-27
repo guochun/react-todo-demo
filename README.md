@@ -57,3 +57,9 @@ APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
 
 - 如果这个state会被多个组件共享 要确定这个组件的公共组件
 把state上移到公用的父组件。(状态上移)
+
+### 添加交互行为
+
+- 借助props 添加反向数据流
+- 新增todo 修改todo的显示 过滤显示
+

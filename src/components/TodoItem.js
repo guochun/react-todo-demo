@@ -2,9 +2,10 @@ import React, { Component } from "react";
 
 class TodoItem extends Component {
   render() {
-    const { text, completed } = this.props;
+    const { text, completed, onClick } = this.props;
     return (
       <li
+        onClick={onClick}
         style={{
           textDecoration: completed ? "line-through" : "none"
         }}
