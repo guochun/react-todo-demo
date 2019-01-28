@@ -9,7 +9,7 @@ export const addTodoItem = text => ({
 })
 
 export const toggleTodoItem = id => ({
-  type: types.toggleTodoItem,
+  type: types.TOGGLE_TODO_ITEM,
   id
 })
 
@@ -19,6 +19,6 @@ export const setFilter = filter => ({
 })
 
 export const setTodoItemText = text => ({
-  type: types.setTodoItemText,
+  type: types.SET_TODO_ITEM_TEXT,
   text
 })

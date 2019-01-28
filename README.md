@@ -107,3 +107,14 @@ APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
 - 把拆分的reducer合并一个reducer combineReducers
 
 - 根据state的拆分reducer 拆分之后的reducer 分别对应处理局部的state。
+
+### 创建store
+
+- 相当粘合剂 把 state action 和 reducer 整合在一起。
+
+- 通过reducer创建一个store
+
+- 通过dispatch 发送 actions 修改store
+
+- 通过 getState 和 subscribe 获取和订阅 store
+
