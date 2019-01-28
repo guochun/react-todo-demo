@@ -89,3 +89,13 @@ APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
 - 描述如何修改状态
 - JSON 对象 type 属性必须
 - 发送 store.dispatch
+
+### Reducer
+- reducer 是一个函数 action定义如何修改state reducer落实代码层面真实修改action
+- reducer 接受两个参数一个state 一个action 返回更改之后的state
+
+- 根据不同的state处理不同的action
+
+- 处理的每个 action 返回的是新的state对象 不是原有的 因为state对象是不可变的。
+
+- 初始默认的state 作为默认参数传递
