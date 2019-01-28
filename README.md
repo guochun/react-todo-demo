@@ -99,3 +99,11 @@ APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
 - 处理的每个 action 返回的是新的state对象 不是原有的 因为state对象是不可变的。
 
 - 初始默认的state 作为默认参数传递
+
+### 拆分reducer
+
+- 便于扩展和维护
+
+- 把拆分的reducer合并一个reducer combineReducers
+
+- 根据state的拆分reducer 拆分之后的reducer 分别对应处理局部的state。
