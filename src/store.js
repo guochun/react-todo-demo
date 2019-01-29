@@ -8,11 +8,13 @@ const store = createStore(rootReducer)
 
 console.log(store.getState())
 
-store.dispatch(addTodoItem('test'))
+
 const unsubscribe = store.subscribe(() => {
   console.log(store.getState())
 })
 
-//unsubscribe()
+store.dispatch(addTodoItem('test'))
+
+unsubscribe()
 
 export default store

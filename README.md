@@ -118,3 +118,9 @@ APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
 
 - 通过 getState 和 subscribe 获取和订阅 store
 
+### react-redux
+
+向根组件注入Store -> Provider组件
+连接React组件和Redux状态层 -> connect
+获取react组件所需要的State和Actions -> map api
+
