@@ -3,6 +3,11 @@ import React, { Component } from "react";
 import TodoItem from "./TodoItem";
 
 class TodoList extends Component {
+
+  componentDidMount() {
+    this.props.fetchTodos()
+  }
+
   render() {
     const { todos, toggleTodoItem } = this.props;
     return (

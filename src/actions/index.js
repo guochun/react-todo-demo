@@ -13,11 +13,11 @@ const fetchTodosSuccess = (data) => ({
 })
 
 const fetchTodosFailure = (err) => ({
-  type: types.fetchTodosFailure,
+  type: types.FETCH_TODOS_FAILURE,
   err
 })
 
-const fetchTodos = () => {
+export const fetchTodos = () => {
 
   return (dispatch) => {
 
@@ -25,7 +25,7 @@ const fetchTodos = () => {
 
     return fetch('./api/todos.json')
       .then(response => {
-        return response.json
+        return response.json()
       }).then(data => {
         dispatch(fetchTodosSuccess(data))
       }).catch(err => {
