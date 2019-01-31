@@ -136,4 +136,7 @@ APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
 然后在定义一个真实请求的action。action的返回值是一个函数 接收一个dispatch方法. 在这个action处理异步的逻辑
 最后要借助redux-thunk处理
 
+### Redux 调试工具
+
+工具名称: Redux DevTools
 
