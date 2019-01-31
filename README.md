@@ -124,3 +124,15 @@ APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
 连接React组件和Redux状态层 -> connect
 获取react组件所需要的State和Actions -> map api
 
+### 异步action
+
+当业务复杂的时候 会涉及到很多异步的场景。 那如何在react如何使用异步的action
+异步的阶段会涉及到3个阶段
+1: 异步开始的时候
+2：异步成功的时候
+3：异步失败的时候
+
+当我们要发送异步action的时候先定义3个辅助的action 一个是异步开始action 一个是异步成功的action 一个是异步失败的时候
+然后在定义一个真实请求的action。action的返回值是一个函数 接收一个dispatch方法. 在这个action处理异步的逻辑
+最后要借助redux-thunk处理
+
