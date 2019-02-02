@@ -147,3 +147,15 @@ APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
 - 按照功能模块
 
 - Ducks(鸭子)
+
+### State设计原则
+
+常见的错误
+
+以API为设计原则
+
+以页面UI为设计原则
+
+正确的做法是像数据库设计state
+
+数据按照领域(Domain)分类 存储在不同的表中，不同的表中存储的列数据不重复
