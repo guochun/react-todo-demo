@@ -140,3 +140,10 @@ APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
 
 工具名称: Redux DevTools
 
+### Redux项目组织结构
+
+- 按照类型
+
+- 按照功能模块
+
+- Ducks(鸭子)
