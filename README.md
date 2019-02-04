@@ -214,3 +214,9 @@ immutable.js 是处理不可变的对象的js库
 如果当state的层级变得复杂的时候就会导致操作数据变的复杂这个时候
 就要通过immutable库操作数据。
 
+## reselect
+
+- 减少state重复计算
+
+-
+
