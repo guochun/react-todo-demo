@@ -2,6 +2,7 @@ import { connect} from "react-redux";
 import TodoList from "../components/TodoList";
 import { toggleTodoItem, fetchTodos } from "../actions";
 import { filterTodos } from '../selectors'
+import toJS from '../HOCs/toJS'
 
 
 
@@ -19,4 +20,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(TodoList);
+)(toJS(TodoList));

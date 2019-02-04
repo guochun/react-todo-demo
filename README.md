@@ -201,3 +201,16 @@ redux的可以使用多个中间件
 
 redux的中间件是一个签名类似这样的签名
 Function: ({getState, dispatch}) => next => action
+
+## immutable 
+
+immutable.js 是处理不可变的对象的js库
+
+因为redux的state要求是不可变的对象,我们在提交一个action
+在处理新的state的时候需要生成一个对象而不是对旧得state修改
+一般我们采用 es6的解构赋值  或者 object.assgin 来处理生成
+一个新的对象。
+
+如果当state的层级变得复杂的时候就会导致操作数据变的复杂这个时候
+就要通过immutable库操作数据。
+
