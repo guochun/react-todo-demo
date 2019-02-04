@@ -1,10 +1,11 @@
 import { connect } from "react-redux";
 import TodoInput from "../components/TodoInput";
 import { addTodoItem, setTodoItemText} from "../actions";
+import { getText } from '../selectors'
 
 
 const mapStateToProps = (state) => ({
-  text: state.text
+  text: getText(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({

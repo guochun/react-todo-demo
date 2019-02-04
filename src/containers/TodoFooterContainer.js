@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
 import TodoFooter from "../components/TodoFooter";
 import { setFilter } from "../actions";
-
+import { getFilter } from '../selectors'
 
 const mapStateToProps = (state) => ({ 
-  filter: state.filter
+  filter: getFilter(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({
