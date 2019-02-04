@@ -189,3 +189,15 @@ APP -> TodoList -> TodoItem -> TodoInput -> TodoFooter
 - 前后端分离
 
 - 微服务化
+
+
+## middleware(中间件)
+
+redux增强dispatch的能力
+
+redux的可以使用多个中间件
+
+我们在view层发送的每个action都会经过多个中间件的处理到达reducer
+
+redux的中间件是一个签名类似这样的签名
+Function: ({getState, dispatch}) => next => action
